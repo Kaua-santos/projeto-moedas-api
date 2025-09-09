@@ -1,41 +1,39 @@
-projeto de consumir api
-# 🐍 Projeto Python
+# 💱 Cotação de Moedas - Python + AwesomeAPI
 
-Bem-vindo ao repositório do **Projeto Python**!  
-Este projeto foi desenvolvido com o objetivo de resolver [adicione aqui a descrição do problema ou propósito do seu projeto].
+Este é um projeto Python simples para consultar a **cotação de moedas em tempo real** utilizando a [AwesomeAPI](https://docs.awesomeapi.com.br/).
 
 ## 🚀 Funcionalidades
 
-- ✅ Funcionalidade 1
-- ✅ Funcionalidade 2
-- ✅ Funcionalidade 3
+- ✅ Consulta de cotação de moedas como USD, EUR, BTC, entre outras
+- ✅ Integração com a AwesomeAPI via requisições HTTP
+- ✅ Retorno formatado com valores de compra, venda e variação
+- ✅ Suporte a múltiplas moedas
 
 ## 📁 Estrutura do Projeto
 
-├── src/ # Código-fonte do projeto
-├── tests/ # Testes automatizados
+├── src/ # Código-fonte
+│ └── cotacao.py # Script principal de cotação
 ├── requirements.txt # Dependências do projeto
 ├── README.md # Documentação do projeto
-└── main.py # Arquivo principal de execução
+└── main.py # Arquivo principal (execução)
 
-markdown
+less
 Copiar código
 
 ## 🛠️ Tecnologias Utilizadas
 
 - Python 3.x
-- [Biblioteca 1]
-- [Biblioteca 2]
-- [Framework, se houver]
+- [Requests](https://pypi.org/project/requests/) – para fazer requisições HTTP
+- AwesomeAPI – para dados de câmbio (https://docs.awesomeapi.com.br/)
 
 ## 📦 Instalação
 
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-Crie um ambiente virtual (opcional, mas recomendado):
+git clone https://github.com/seu-usuario/cotacao-moedas-python.git
+cd cotacao-moedas-python
+Crie um ambiente virtual (opcional):
 
 bash
 Copiar código
@@ -47,44 +45,46 @@ Instale as dependências:
 bash
 Copiar código
 pip install -r requirements.txt
-▶️ Como Executar
-Execute o arquivo principal:
+▶️ Como Usar
+Execute o script principal:
 
 bash
 Copiar código
 python main.py
-🧪 Executando os Testes
-Se você tiver testes configurados, pode executá-los assim:
+Você pode personalizar para buscar diferentes moedas. Exemplo de chamada usando o módulo cotacao.py:
 
-bash
+python
 Copiar código
-python -m unittest discover tests
+from src.cotacao import buscar_cotacao
+
+moeda = "USD-BRL"
+cotacao = buscar_cotacao(moeda)
+print(cotacao)
+🧪 Exemplo de Retorno
+json
+Copiar código
+{
+  "USD": {
+    "code": "USD",
+    "codein": "BRL",
+    "name": "Dólar Americano/Real Brasileiro",
+    "bid": "5.1300",
+    "ask": "5.1400",
+    "high": "5.1600",
+    "low": "5.1000",
+    "varBid": "0.0200",
+    "pctChange": "0.39",
+    "timestamp": "1694265600"
+  }
+}
 🤝 Contribuindo
-Contribuições são sempre bem-vindas!
-Abra uma issue com sugestões ou envie um pull request com melhorias.
+Contribuições são bem-vindas!
+Sinta-se à vontade para abrir uma issue ou enviar um pull request com sugestões, melhorias ou correções.
 
 📄 Licença
-Este projeto está sob a licença [Gabriel].
-Consulte o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a MIT License.
 
-Desenvolvido com ❤️ por [Kauã Santos]
+Desenvolvido com ❤️ por [Seu Nome ou @seu-usuario]
 
 yaml
 Copiar código
-
----
-
-Se quiser, me diga o nome real do projeto, funcionalidades, bibliotecas usadas, ou qualquer outro detalhe, que eu personalizo para você.
-
-
-
-Perguntar ao ChatGPT
-
-
-Anexar
-
-Buscar
-
-Estudar
-
-Voz
